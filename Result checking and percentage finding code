@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter marks of OOPs: ");
+        int oops = sc.nextInt();
+
+        System.out.print("Enter marks of DSD: ");
+        int dsd = sc.nextInt();
+
+        System.out.print("Enter marks of CMOS: ");
+        int cmos = sc.nextInt();
+
+        System.out.print("Enter marks of English: ");
+        int english = sc.nextInt();
+
+        System.out.print("Enter marks of IOT: ");
+        int iot = sc.nextInt();
+
+        int total = oops + dsd + cmos + english + iot;
+        double percentage = total / 5;
+
+        System.out.println("Result ");
+        System.out.println("Total Marks: " + total);
+        System.out.println("Percentage: " + percentage + "%");
+
+        if (total < 300) {
+            System.out.println("Unsuccessful Result");
+        } else {
+            System.out.println("Successful Result");
+        }
+    }
+}
