@@ -1,0 +1,9 @@
+public class Main {
+    public static void printMessage() {
+        System.out.println("I am method");
+    }
+
+    public static void main(String[] args) {
+        printMessage();
+    }
+}
