@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class BankingCode {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int balance = 0;
+
+        System.out.print("Enter amount to deposit: ");
+        int deposit = sc.nextInt();
+        balance = balance + deposit;
+
+        System.out.println("Amount deposited: " + deposit);
+        System.out.println("Current balance: " + balance);
+    }
+}
