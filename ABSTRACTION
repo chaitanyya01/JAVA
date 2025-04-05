@@ -1,0 +1,17 @@
+
+abstract class Animal {
+    abstract void barks();
+}
+
+class Tommy extends Animal {
+    void barks() {
+        System.out.println("Tommy Is Barking ");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal s1 = new Tommy();
+        s1.barks();
+    }
+}
