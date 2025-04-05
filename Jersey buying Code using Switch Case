@@ -11,7 +11,6 @@ public class Main {
         System.out.println("4. Al-Nassr");
         System.out.print("Enter your choice (1-4): ");
         int choice = sc.nextInt();
-        sc.nextLine();
 
         String jersey;
         switch (choice) {
@@ -40,6 +39,6 @@ public class Main {
         System.out.println(" Order Details");
         System.out.println("Jersey: " + jersey);
         System.out.println("Delivery Address: " + address);
-        System.out.println("Expected Delivery Date Within 7-8 Days");
+        System.out.println("Expected Delivery  within 7-8 Days");
     }
 }
