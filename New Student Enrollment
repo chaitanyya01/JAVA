@@ -1,0 +1,25 @@
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Student ID: ");
+        int id = sc.nextInt();
+        System.out.print("Enter Roll Number: ");
+        int rollNo = sc.nextInt();
+        sc.nextLine();
+        System.out.print("Enter Branch: ");
+        String branch = sc.nextLine();
+        System.out.print("Enter 12th Percentage: ");
+        float percentage = sc.nextFloat();
+
+        System.out.println("Student Details Are Given Below ");
+        System.out.println("Student ID: " + id);
+        System.out.println("Roll Number: " + rollNo);
+        System.out.println("Branch: " + branch);
+        System.out.println("12th Percentage: " + percentage + "%");
+    }
+}
