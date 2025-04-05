@@ -1,0 +1,26 @@
+class Engineering {
+    void stream() {
+        System.out.println("Stream: Engineering");
+    }
+}
+
+class Branch extends Engineering {
+    void branchName() {
+        System.out.println("Branch: Computer Science");
+    }
+}
+
+class Subject extends Branch {
+    void subjectName() {
+        System.out.println("Subject: Data Structures");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Subject s1 = new Subject();
+        s1.stream();
+        s1.branchName();
+        s1.subjectName();
+    }
+}
