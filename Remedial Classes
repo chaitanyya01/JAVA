@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class RemedialClasses{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your marks: ");
+        int marks = sc.nextInt();
+
+        if (marks < 8) {
+            System.out.println("You need to attend remedial classes");
+        } else {
+            System.out.println("You passed");
+        }
+    }
+}
