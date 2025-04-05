@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Available Jerseys:");
+        System.out.println("1. Barcelona");
+        System.out.println("2. Juventus");
+        System.out.println("3. Madrid");
+        System.out.println("4. Al-Nassr");
+        System.out.print("Enter your choice (1-4): ");
+        int choice = sc.nextInt();
+        sc.nextLine();
+
+        String jersey;
+        switch (choice) {
+            case 1:
+                jersey = "Barcelona";
+                break;
+            case 2:
+                jersey = "Juventus";
+                break;
+            case 3:
+                jersey = "Madrid";
+                break;
+            case 4:
+                jersey = "Al-Nassr";
+                break;
+            default:
+                System.out.println("Invalid choice");
+                return;
+        }
+
+        System.out.print("Enter your address: ");
+        String address = sc.nextLine();
+
+        
+
+        System.out.println(" Order Details");
+        System.out.println("Jersey: " + jersey);
+        System.out.println("Delivery Address: " + address);
+        System.out.println("Expected Delivery Date Within 7-8 Days");
+    }
+}
