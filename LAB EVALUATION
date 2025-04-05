@@ -1,0 +1,28 @@
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Viva 1 marks (out of 5): ");
+        int viva1 = sc.nextInt();
+
+        System.out.print("Enter Viva 2 marks (out of 5): ");
+        int viva2 = sc.nextInt();
+
+        System.out.print("Enter Journal marks (out of 10): ");
+        int journal = sc.nextInt();
+
+        int total = viva1 + viva2 + journal;
+
+        System.out.println("\nTotal Marks: " + total);
+
+        if (total < 8) {
+            System.out.println("Appear in Improvement Exam");
+        } else {
+            System.out.println("You passed");
+        }
+    }
+}
