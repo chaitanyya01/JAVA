@@ -1,0 +1,63 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+
+   
+    public static void displayCarDetails(String model, ArrayList<String> cars, ArrayList<Integer> tyres, ArrayList<Integer> cc) {
+        switch (model) {
+            case "SUV":
+                System.out.println("Model: " + cars.get(0));
+                System.out.println("Tyres: " + tyres.get(0));
+                System.out.println("CC: " + cc.get(0));
+                break;
+            case "SEDAN":
+                System.out.println("Model: " + cars.get(1));
+                System.out.println("Tyres: " + tyres.get(1));
+                System.out.println("CC: " + cc.get(0));
+                break;
+            case "HASH":
+                System.out.println("Model: " + cars.get(2));
+                System.out.println("Tyres: " + tyres.get(0));
+                System.out.println("CC: " + cc.get(1));
+                break;
+            case "MPL":
+                System.out.println("Model: " + cars.get(3));
+                System.out.println("Tyres: " + tyres.get(1));
+                System.out.println("CC: " + cc.get(2));
+                break;
+            default:
+                System.out.println("Invalid car model entered.");
+        }
+    }
+
+    public static void main(String[] args) {
+        long starttime = System.nanoTime();
+        System.out.println("Start Time: " + starttime);
+
+        ArrayList<String> cars = new ArrayList<>();
+        cars.add("SUV");
+        cars.add("SEDAN");
+        cars.add("HASH");
+        cars.add("MPL");
+
+        ArrayList<Integer> NoOfTYRES = new ArrayList<>();
+        NoOfTYRES.add(2 * 4);  
+        NoOfTYRES.add(4 * 4);
+
+        ArrayList<Integer> CC = new ArrayList<>();
+        CC.add(1000);
+        CC.add(1500);
+        CC.add(2000);
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ENTER CAR MODEL (SUV, SEDAN, HASH, MPL) TO KNOW ABOUT NO OF TYRES AND ITS CC:");
+        String carInput = sc.nextLine().toUpperCase();  
+
+        displayCarDetails(carInput, cars, NoOfTYRES, CC);
+
+        long stoptime = System.nanoTime();
+        System.out.println(stoptime);
+        System.out.println("Execution Time" + (stoptime - starttime));
+    }
+}
