@@ -1,0 +1,10 @@
+public class BasicString {
+    public static void main(String[] args) {
+        String name = "Tetrax";
+        String greeting = "Hello, " + name;
+        System.out.println(greeting);
+        System.out.println("Length: " + greeting.length());
+        System.out.println("Uppercase: " + greeting.toUpperCase());
+        System.out.println("Substring: " + greeting.substring(0, 5));
+    }
+}
