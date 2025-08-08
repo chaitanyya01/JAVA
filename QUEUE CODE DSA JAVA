@@ -1,0 +1,52 @@
+public class Main {
+   int size = 5;
+int[] queue = new int[size];
+int front = -1;
+int rear = -1;
+void enqueue(int data) {
+    if (rear == size - 1) {
+        System.out.println("OVERFLOW, NO MEMORY FOR THE DATA");
+ }  else {
+     if (front == -1) front = 0;
+      queue[++rear] = data;
+           System.out.println("Inserted dATA IS: " + data);
+        }
+    }
+
+void dequeue()
+{
+ if ((front == -1 && rear==-1)||front>rear) {
+            System.out.println("UNDERFLOW ERROR");
+}
+else {
+            System.out.println("REMOVED DATA: " + queue[front++]);
+            if(front>rear){
+                System.out.println("Pointer is stopped ");
+               
+            }
+        }
+    }
+void printLastElement() {
+ if (rear == -1 || front<rear) {
+            System.out.println("QUEUE, no last element.");
+} else {
+            System.out.println("Last element in queue: " + queue[rear]);
+        }
+    }    
+public static void main(String[] args) {
+        Main Q = new Main();
+        Q.enqueue(10);
+        Q.enqueue(20);
+        Q.enqueue(30);
+        Q.enqueue(40);
+        Q.enqueue(50);
+        Q.enqueue(60);
+        Q.dequeue();
+        Q.dequeue();
+        Q.dequeue();
+        Q.enqueue(60);
+        Q.printLastElement();
+        Q.dequeue();
+        Q.dequeue();
+        Q.dequeue();
+    }
