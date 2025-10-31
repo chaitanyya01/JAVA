@@ -1,0 +1,36 @@
+import java.util.Scanner;
+import java.util.*
+class Node {
+int data;
+Node next;
+Node(int data) {
+this.data = data;
+}
+}
+public class LinkedList {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.print(&quot;Enter number of elements: &quot;);
+int count = sc.nextInt();
+Node head = null,tail = null;
+for (int i = 0; i &lt; count; i++) {
+System.out.print(&quot;Enter element-- &quot; + (i + 1)+&quot;--is&quot; );
+int val = sc.nextInt();
+Node newNode = new Node(val);
+if (head == null) {
+head = newNode;
+tail = head;
+} else {
+tail.next = newNode;
+tail = tail.next;
+}
+}
+sc.close();
+Node current = head;
+System.out.println(&quot;Linked List elements:&quot;);
+while (current != null) {
+System.out.print(current.data + &quot; &quot;);
+current = current.next;
+}
+}
+}
