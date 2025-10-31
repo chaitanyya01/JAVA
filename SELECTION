@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class MySelectionSort {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+// Input size of array
+System.out.print(&quot;Enter number of elements: &quot;);
+int n = sc.nextInt();
+int[] arr = new int[n];
+// Input array elements
+System.out.println(&quot;Enter &quot; + n + &quot; numbers:&quot;);
+for (int i = 0; i &lt; n; i++) {
+arr[i] = sc.nextInt();
+}
+// Selection sort
+for (int i = 0; i &lt; n - 1; i++) {
+int minIndex = i;
+for (int j = i + 1; j &lt; n; j++) {
+if (arr[j] &lt; arr[minIndex]) {
+minIndex = j;
+}
+}
+// Swap
+int temp = arr[minIndex];
+arr[minIndex] = arr[i];
+arr[i] = temp;
+}
+// Print sorted array
+System.out.println(&quot;Sorted array:&quot;);
+for (int num : arr) {
+System.out.print(num + &quot; &quot;);
+}
