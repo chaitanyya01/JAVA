@@ -1,0 +1,25 @@
+public class MyBinarySearch {
+public static int binarySearchRecursive(int[] arr, int target, int left, int right) {
+if (left &gt; right) {
+return -1;
+}
+int mid = left + (right - left) / 2;
+if (arr[mid] == target) {
+return mid;
+} else if (arr[mid] &lt; target) {
+return binarySearchRecursive(arr, target, mid + 1, right);
+} else {
+return binarySearchRecursive(arr, target, left, mid - 1);
+}
+}
+public static void main(String[] args) {
+int[] numbers = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20};
+int target = 14;
+int result = binarySearchRecursive(numbers, target, 0, numbers.length - 1);
+if (result == -1) {
+System.out.println(&quot;Element not found.&quot;);
+} else {
+System.out.println(&quot;Element found at index: &quot; + result);
+}
+}
+}
