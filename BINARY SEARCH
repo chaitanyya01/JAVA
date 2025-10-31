@@ -1,0 +1,32 @@
+mport java.util.Scanner;
+public class MyBinarySearch{
+public static int binarySearch(int[] arr, int target) {
+int left = 0;
+int right = arr.length - 1;
+while (left &lt;= right) {
+int mid = left + (right - left) / 2;
+
+if (arr[mid] == target)
+return mid;
+else if (arr[mid] &lt; target)
+left = mid + 1;
+else
+right = mid - 1;
+}
+return -1;
+}
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+
+System.out.print(&quot;Enter number of elements: &quot;);
+int n = sc.nextInt();
+int[] numbers = new int[n];
+
+System.out.println(&quot;Enter &quot; + n + &quot; sorted numbers:&quot;);
+for (int i = 0; i &lt; n; i++) {
+numbers[i] = sc.nextInt();
+}
+System.out.print(&quot;Enter number to search: &quot;);
+int target = sc.nextInt();
+
+int result = binarySearch(numbers, target);
